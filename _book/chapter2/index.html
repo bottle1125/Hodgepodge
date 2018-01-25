@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>情景一 · GitBook</title>
+        <title>GraphQL · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter2/" />
+    <link rel="next" href="doc.html" />
     
     
-    <link rel="prev" href="README.md" />
+    <link rel="prev" href="../chapter1/section1.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="README.md">
+        <li class="chapter " data-level="1.2" data-path="../chapter1/README.md">
             
                 <span>
             
@@ -116,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="section1.html">
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/section1.html">
             
-                <a href="section1.html">
+                <a href="../chapter1/section1.html">
             
                     
                     情景一
@@ -134,9 +134,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+        <li class="chapter active" data-level="1.3" data-path="./">
             
-                <a href="../chapter2/">
+                <a href="./">
             
                     
                     GraphQL
@@ -148,9 +148,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../chapter2/doc.html">
+        <li class="chapter " data-level="1.3.1" data-path="doc.html">
             
-                <a href="../chapter2/doc.html">
+                <a href="doc.html">
             
                     
                     查阅文档
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../chapter2/basic.html">
+        <li class="chapter " data-level="1.3.2" data-path="basic.html">
             
-                <a href="../chapter2/basic.html">
+                <a href="basic.html">
             
                     
                     基础用法
@@ -174,9 +174,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../chapter2/variables.html">
+        <li class="chapter " data-level="1.3.3" data-path="variables.html">
             
-                <a href="../chapter2/variables.html">
+                <a href="variables.html">
             
                     
                     variables
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../chapter2/fragment.html">
+        <li class="chapter " data-level="1.3.4" data-path="fragment.html">
             
-                <a href="../chapter2/fragment.html">
+                <a href="fragment.html">
             
                     
                     fragment
@@ -235,7 +235,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >情景一</a>
+        <a href=".." >GraphQL</a>
     </h1>
 </div>
 
@@ -250,44 +250,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x60C5;&#x666F;&#x4E00;">&#x60C5;&#x666F;&#x4E00;</h3>
-<blockquote>
-<p>&#x4E2D;&#x6587;&#x62FC;&#x97F3;&#x6392;&#x5E8F;&#xFF1A;
-    &apos;&#x7CD6;&#x997C;&apos;, &apos;&#x7EFF;&#x7BAD;&apos;, &apos;&#x707F;&#x707F;&apos;, &apos;&#x66FC;&#x5DF4;&apos;, &apos;&#x5929;&#x5434;&apos;, &apos;&#x829D;&#x58EB;&apos;,
-    &apos;&#x4E1C;&#x90AA;&apos;, &apos;&#x74F6;&#x5B50;&apos;, &apos;&#x4E91;&#x82A6;&apos;, &apos;&#x767D;&#x9640;&apos;, &apos;&#x83DC;&#x74DC;&apos;, &apos;&#x57CE;&#x7BA1;&apos;,
-    &apos;&#x67AB;&#x53F6;&apos;, &apos;&#x82B1;&#x751F;&apos;, &apos;&#x6D41;&#x6D6A;&#x4EBA;&apos;, &apos;&#x96EA;&#x78A7;&apos;,</p>
-<p>ps:&#x4EC5;&#x9700;&#x8981;&#x652F;&#x6301;Chrome&#x6D4F;&#x89C8;&#x5668;&#xFF0C;node&#x73AF;&#x5883;&#x4E0B;&#x4E0D;&#x652F;&#x6301;</p>
-</blockquote>
-<pre><code>function sortChinese(arr) {
-    if(!String.prototype.localeCompare)
-        return null;
-
-    var letters = &quot;abcdefghjklmnopqrstwxyz&quot;.split(&apos;&apos;);
-    var zh = &quot;&#x963F;&#x516B;&#x5693;&#x54D2;&#x59B8;&#x53D1;&#x65EE;&#x54C8;&#x8BA5;&#x5494;&#x5783;&#x75F3;&#x62CF;&#x5662;&#x5991;&#x4E03;&#x5465;&#x6268;&#x5B83;&#x7A75;&#x5915;&#x4E2B;&#x5E00;&quot;.split(&apos;&apos;);
-
-    var segs = [];
-    var curr;
-    letters.forEach(function(item,i){
-        curr = {letter: &apos;&apos;, data:[]};
-        arr.forEach(function(item2){
-            if((!zh[i-1] || zh[i-1].localeCompare(item2,&apos;zh&apos;) &lt;= 0) &amp;&amp; item2.localeCompare(zh[i], &apos;zh&apos;) == -1) {
-                curr.letter = letters[i-1];
-                curr.data.push(item2);
-            }
-        });
-        if(curr.data.length) {
-            segs.push(curr);
-            curr.data.sort(function(a,b){
-                return a.localeCompare(b, &apos;zh&apos;);
-            });
-        }
-    });
-    return segs;
-}
-
-sortChinese([&apos;&#x7CD6;&#x997C;&apos;, &apos;&#x7EFF;&#x7BAD;&apos;, &apos;&#x707F;&#x707F;&apos;, &apos;&#x66FC;&#x5DF4;&apos;, &apos;&#x5929;&#x5434;&apos;, &apos;&#x829D;&#x58EB;&apos;,&apos;&#x4E1C;&#x90AA;&apos;, &apos;&#x74F6;&#x5B50;&apos;, &apos;&#x4E91;&#x82A6;&apos;, &apos;&#x767D;&#x9640;&apos;, &apos;&#x83DC;&#x74DC;&apos;, &apos;&#x57CE;&#x7BA1;&apos;,&apos;&#x67AB;&#x53F6;&apos;, &apos;&#x82B1;&#x751F;&apos;, &apos;&#x6D41;&#x6D6A;&#x4EBA;&apos;, &apos;&#x96EA;&#x78A7;&apos;]);
-</code></pre><p>&#x7ED3;&#x679C;&#x8FD0;&#x884C;&#x56FE;&#xFF1A;</p>
-<p><img src="images/img1.png" alt=""></p>
+                                <h3 id="introduction">Introduction</h3>
+<p>&#x6700;&#x8FD1;&#x9879;&#x76EE;&#x4E2D;&#x540E;&#x7AEF;&#x63A5;&#x5165;&#x4E86;GraphQL&#xFF0C;&#x524D;&#x7AEF;&#x5F53;&#x7136;&#x4E5F;&#x8981;&#x4E0E;&#x65F6;&#x4FF1;&#x8FDB;&#xFF0C;&#x4E4D;&#x4E00;&#x770B;&#x6587;&#x6863;&#xFF0C;&#x524D;&#x7AEF;&#x597D;&#x50CF;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x7528;&#x505A;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x8D77;&#x6765;&#xFF0C;&#x53D1;&#x73B0;&#x8FD8;&#x662F;&#x6709;&#x633A;&#x591A;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x4E0A;&#x5F88;&#x591A;&#x6559;&#x7A0B;&#x90FD;&#x53EA;&#x544A;&#x8BC9;&#x4F60;GraphQL&#x6709;&#x54EA;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x7136;&#x540E;demo&#x4E5F;&#x662F;&#x5199;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x91CC;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x6211;&#x4E0D;&#x77E5;&#x9053;&#x8BE5;&#x600E;&#x4E48;&#x8FD0;&#x7528;&#x5230;&#x9879;&#x76EE;&#x91CC;&#x554A;&#xFF0C;&#x771F;&#x6349;&#x6025;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x60F3;&#x4ECE;&#x524D;&#x7AEF;&#x89D2;&#x5EA6;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;GraphQL&#x7684;&#x4E00;&#x4E9B;&#x4F7F;&#x7528;&#x3002;</p>
 
                                 
                                 </section>
@@ -315,12 +280,12 @@ sortChinese([&apos;&#x7CD6;&#x997C;&apos;, &apos;&#x7EFF;&#x7BAD;&apos;, &apos;&
 
             
                 
-                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 算法">
+                <a href="../chapter1/section1.html" class="navigation navigation-prev " aria-label="Previous page: 情景一">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter2/" class="navigation navigation-next " aria-label="Next page: GraphQL">
+                <a href="doc.html" class="navigation navigation-next " aria-label="Next page: 查阅文档">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -331,7 +296,7 @@ sortChinese([&apos;&#x7CD6;&#x997C;&apos;, &apos;&#x7EFF;&#x7BAD;&apos;, &apos;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"情景一","level":"1.2.1","depth":2,"next":{"title":"GraphQL","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"查阅文档","level":"1.3.1","depth":2,"path":"chapter2/doc.md","ref":"chapter2/doc.md","articles":[]},{"title":"基础用法","level":"1.3.2","depth":2,"path":"chapter2/basic.md","ref":"chapter2/basic.md","articles":[]},{"title":"variables","level":"1.3.3","depth":2,"path":"chapter2/variables.md","ref":"chapter2/variables.md","articles":[]},{"title":"fragment","level":"1.3.4","depth":2,"path":"chapter2/fragment.md","ref":"chapter2/fragment.md","articles":[]}]},"previous":{"title":"算法","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"情景一","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.md","mtime":"2018-01-25T02:45:11.576Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-25T08:06:59.388Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GraphQL","level":"1.3","depth":1,"next":{"title":"查阅文档","level":"1.3.1","depth":2,"path":"chapter2/doc.md","ref":"chapter2/doc.md","articles":[]},"previous":{"title":"情景一","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/README.md","mtime":"2018-01-25T08:08:39.063Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-25T08:06:59.388Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
