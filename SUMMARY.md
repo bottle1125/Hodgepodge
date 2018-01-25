@@ -1,6 +1,7 @@
 * [算法](chapter1/README.md)
     * [情景一](chapter1/section1.md)
 * [GraphQL](chapter2/README.md)
+    * [名字释义](chapter2/definition.md)
     * [查阅文档](chapter2/doc.md)
     * [基础用法](chapter2/basic.md)
     * [variables](chapter2/variables.md)
