@@ -7,6 +7,7 @@
     * [variables](chapter2/variables.md)
     * [fragment](chapter2/fragment.md)
 * [Javascript](chapter3/README.md)
+    * [基本类型](chapter3/base.md)
     * [数组](chapter3/array.md)
 * [React](chapter4/README.md)
     * [样式](chapter4/style.md)
