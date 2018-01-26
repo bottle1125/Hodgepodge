@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Javascript · GitBook</title>
+        <title>样式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="array.html" />
     
-    
-    <link rel="prev" href="../chapter2/fragment.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -218,9 +216,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
             
-                <a href="./">
+                <a href="../chapter3/">
             
                     
                     Javascript
@@ -232,9 +230,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="array.html">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/array.html">
             
-                <a href="array.html">
+                <a href="../chapter3/array.html">
             
                     
                     数组
@@ -250,9 +248,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../chapter4/">
+                <a href="./">
             
                     
                     React
@@ -264,9 +262,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../chapter4/style.html">
+        <li class="chapter active" data-level="1.5.1" data-path="style.html">
             
-                <a href="../chapter4/style.html">
+                <a href="style.html">
             
                     
                     样式
@@ -312,7 +310,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Javascript</a>
+        <a href=".." >样式</a>
     </h1>
 </div>
 
@@ -327,8 +325,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>javascript&#x65B9;&#x9762;&#x4E00;&#x4E9B;&#x4E0D;&#x719F;&#x6089;&#x7684;&#x8BED;&#x6CD5;</p>
+                                <h3 id="style-of-react">Style of React</h3>
+<h4 id="inline-style">Inline Style</h4>
+<p><code>react</code>&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x5355;&#x4F4D;<code>px</code></p>
+<pre><code>render() {
+    return (
+        &lt;div style={{ width: 100 }}&gt;&lt;/div&gt;
+    )
+}
+</code></pre><pre><code>render() {
+    const style = {
+        width: 100
+    }
+    return (
+        &lt;div style={ style }&gt;&lt;/div&gt;
+    )
+}
+</code></pre><h4 id="css-modules">css modules</h4>
+<h5 id="webpack&#x914D;&#x7F6E;">webpack&#x914D;&#x7F6E;</h5>
+<p><code>css-loader?modules</code></p>
+<h5 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h5>
+<p>&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6837;&#x5F0F;&#x5C3D;&#x91CF;&#x7528;&#x4E00;&#x4E2A;<code>class</code>&#x8868;&#x793A;&#xFF0C;&#x501F;&#x52A9;<code>css modules</code>&#x7684; <code>composes</code>&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x5176;&#x4ED6;&#x7684;<code>class</code>&#x540D;</p>
+<pre><code>// app.js
+import styles from &apos;./css/app.css&apos;;
+...
+render() {
+    return (
+        &lt;div className={ styles.wrapper }&gt;&lt;/div&gt;
+        &lt;div className=&quot;container&quot;&gt;&lt;/div&gt;
+    )
+}
 
+// css/app.css
+.base {
+    display: inline-block;
+}
+.wrapper {
+    composes: base;
+    width: 100;
+}
+
+:global(.container) {
+    composes: base from &apos;./base.css&apos;;
+}
+</code></pre><p><code>:global</code>&#x8868;&#x793A;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#xFF0C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6807;&#x5FD7;&#x7684;&#x6837;&#x5F0F;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x6837;&#x5F0F;&#x540D;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x9879;&#x76EE;&#x4E2D;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x6837;&#x5F0F;&#x91CD;&#x590D;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x6211;&#x4E00;&#x822C;&#x662F;&#x628A;&#x5E38;&#x7528;&#x7684;&#x6837;&#x5F0F;&#x8BBE;&#x4E3A;&#x5168;&#x5C40;&#xFF0C;&#x518D;&#x901A;&#x8FC7;<code>composes</code>&#x5F15;&#x7528;</p>
+<h4 id="classnames">classnames</h4>
+<p>&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x7528;&#x6765;&#x8868;&#x793A;&#x52A8;&#x6001;&#x4FEE;&#x6539;&#x6837;&#x5F0F;</p>
+<pre><code>import classNames from &apos;classnames/bind&apos;;
+import styles from &apos;../css/app.css&apos;;
+
+const cx = classNames.bind(styles);
+
+render() {
+    const className = cx({
+        base: true,
+        active: this.state.active
+    })
+    return(
+        &lt;div className={ className }&gt;&lt;/div&gt;
+    )
+}
+
+// &#x5982;&#x679C;&#x5FAA;&#x73AF;&#x6E32;&#x67D3;&#x5217;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6837;&#x5F0F;&#x4E0E;&#x5217;&#x8868;&#x6709;&#x5173;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5199;&#x6210;&#x884C;&#x5185;&#x6837;&#x5F0F;
+render() {
+    const className = cx({
+        base: true,
+        active: this.state.active
+    })
+    return(
+        &lt;ul&gt;
+            { lists.map((list,key) =&gt; 
+                &lt;li key={key} className={cx({
+                    base: true,
+                    active: this.state.active === key
+                })}&gt;{ list }&lt;/li&gt;
+            ) }
+        &lt;/ul&gt;
+    )
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -355,14 +430,10 @@
 
             
                 
-                <a href="../chapter2/fragment.html" class="navigation navigation-prev " aria-label="Previous page: fragment">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: React">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="array.html" class="navigation navigation-next " aria-label="Next page: 数组">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -371,7 +442,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Javascript","level":"1.4","depth":1,"next":{"title":"数组","level":"1.4.1","depth":2,"path":"chapter3/array.md","ref":"chapter3/array.md","articles":[]},"previous":{"title":"fragment","level":"1.3.5","depth":2,"path":"chapter2/fragment.md","ref":"chapter2/fragment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/README.md","mtime":"2018-01-26T02:30:53.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T08:30:27.754Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"样式","level":"1.5.1","depth":2,"previous":{"title":"React","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"样式","level":"1.5.1","depth":2,"path":"chapter4/style.md","ref":"chapter4/style.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/style.md","mtime":"2018-01-26T08:51:13.715Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T08:30:27.754Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

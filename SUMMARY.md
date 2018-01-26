@@ -8,3 +8,5 @@
     * [fragment](chapter2/fragment.md)
 * [Javascript](chapter3/README.md)
     * [数组](chapter3/array.md)
+* [React](chapter4/README.md)
+    * [样式](chapter4/style.md)
