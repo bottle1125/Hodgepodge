@@ -6,3 +6,5 @@
     * [基础用法](chapter2/basic.md)
     * [variables](chapter2/variables.md)
     * [fragment](chapter2/fragment.md)
+* [Javascript](chapter3/README.md)
+    * [数组](chapter3/array.md)

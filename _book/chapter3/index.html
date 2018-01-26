@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>GraphQL · GitBook</title>
+        <title>Javascript · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="definition.html" />
+    <link rel="next" href="array.html" />
     
     
-    <link rel="prev" href="../chapter1/section1.html" />
+    <link rel="prev" href="../chapter2/fragment.html" />
     
 
     </head>
@@ -134,9 +134,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
             
-                <a href="./">
+                <a href="../chapter2/">
             
                     
                     GraphQL
@@ -148,9 +148,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="definition.html">
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/definition.html">
             
-                <a href="definition.html">
+                <a href="../chapter2/definition.html">
             
                     
                     名字释义
@@ -161,9 +161,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="doc.html">
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/doc.html">
             
-                <a href="doc.html">
+                <a href="../chapter2/doc.html">
             
                     
                     查阅文档
@@ -174,9 +174,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="basic.html">
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/basic.html">
             
-                <a href="basic.html">
+                <a href="../chapter2/basic.html">
             
                     
                     基础用法
@@ -187,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="variables.html">
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/variables.html">
             
-                <a href="variables.html">
+                <a href="../chapter2/variables.html">
             
                     
                     variables
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="fragment.html">
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/fragment.html">
             
-                <a href="fragment.html">
+                <a href="../chapter2/fragment.html">
             
                     
                     fragment
@@ -218,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+        <li class="chapter active" data-level="1.4" data-path="./">
             
-                <a href="../chapter3/">
+                <a href="./">
             
                     
                     Javascript
@@ -232,9 +232,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../chapter3/array.html">
+        <li class="chapter " data-level="1.4.1" data-path="array.html">
             
-                <a href="../chapter3/array.html">
+                <a href="array.html">
             
                     
                     数组
@@ -280,7 +280,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >GraphQL</a>
+        <a href=".." >Javascript</a>
     </h1>
 </div>
 
@@ -295,9 +295,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="introduction">Introduction</h3>
-<p>&#x6700;&#x8FD1;&#x9879;&#x76EE;&#x4E2D;&#x540E;&#x7AEF;&#x63A5;&#x5165;&#x4E86;GraphQL&#xFF0C;&#x524D;&#x7AEF;&#x5F53;&#x7136;&#x4E5F;&#x8981;&#x4E0E;&#x65F6;&#x4FF1;&#x8FDB;&#xFF0C;&#x4E4D;&#x4E00;&#x770B;&#x6587;&#x6863;&#xFF0C;&#x524D;&#x7AEF;&#x597D;&#x50CF;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x7528;&#x505A;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x8D77;&#x6765;&#xFF0C;&#x53D1;&#x73B0;&#x8FD8;&#x662F;&#x6709;&#x633A;&#x591A;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x4E0A;&#x5F88;&#x591A;&#x6559;&#x7A0B;&#x90FD;&#x53EA;&#x544A;&#x8BC9;&#x4F60;GraphQL&#x6709;&#x54EA;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x7136;&#x540E;demo&#x4E5F;&#x662F;&#x5199;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x91CC;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x6211;&#x4E0D;&#x77E5;&#x9053;&#x8BE5;&#x600E;&#x4E48;&#x8FD0;&#x7528;&#x5230;&#x9879;&#x76EE;&#x91CC;&#x554A;&#xFF0C;&#x771F;&#x6349;&#x6025;&#x3002;</p>
-<p>&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x60F3;&#x4ECE;&#x524D;&#x7AEF;&#x89D2;&#x5EA6;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;GraphQL&#x7684;&#x4E00;&#x4E9B;&#x4F7F;&#x7528;&#x3002;</p>
+                                <p>javascript&#x65B9;&#x9762;&#x4E00;&#x4E9B;&#x4E0D;&#x719F;&#x6089;&#x7684;&#x8BED;&#x6CD5;</p>
 
                                 
                                 </section>
@@ -325,12 +323,12 @@
 
             
                 
-                <a href="../chapter1/section1.html" class="navigation navigation-prev " aria-label="Previous page: 情景一">
+                <a href="../chapter2/fragment.html" class="navigation navigation-prev " aria-label="Previous page: fragment">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="definition.html" class="navigation navigation-next " aria-label="Next page: 名字释义">
+                <a href="array.html" class="navigation navigation-next " aria-label="Next page: 数组">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -341,7 +339,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GraphQL","level":"1.3","depth":1,"next":{"title":"名字释义","level":"1.3.1","depth":2,"path":"chapter2/definition.md","ref":"chapter2/definition.md","articles":[]},"previous":{"title":"情景一","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/README.md","mtime":"2018-01-25T08:08:39.063Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T02:18:33.323Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Javascript","level":"1.4","depth":1,"next":{"title":"数组","level":"1.4.1","depth":2,"path":"chapter3/array.md","ref":"chapter3/array.md","articles":[]},"previous":{"title":"fragment","level":"1.3.5","depth":2,"path":"chapter2/fragment.md","ref":"chapter2/fragment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/README.md","mtime":"2018-01-26T02:30:53.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T02:18:33.323Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
