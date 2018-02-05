@@ -16,7 +16,7 @@
 $.ajax({
     url: '/graphql',
     data: {
-        query: `query{     // 使用ES6的语法就可以啦
+        query: `query{     // 使用反引号就可以啦
             hero{
                 name
                 friends {

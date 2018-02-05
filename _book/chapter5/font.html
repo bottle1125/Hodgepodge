@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>variables · GitBook</title>
+        <title>safari中字号变大 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="fragment.html" />
     
-    
-    <link rel="prev" href="basic.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -134,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
             
-                <a href="./">
+                <a href="../chapter2/">
             
                     
                     GraphQL
@@ -148,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="definition.html">
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/definition.html">
             
-                <a href="definition.html">
+                <a href="../chapter2/definition.html">
             
                     
                     名字释义
@@ -161,9 +159,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="doc.html">
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/doc.html">
             
-                <a href="doc.html">
+                <a href="../chapter2/doc.html">
             
                     
                     查阅文档
@@ -174,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="basic.html">
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/basic.html">
             
-                <a href="basic.html">
+                <a href="../chapter2/basic.html">
             
                     
                     基础用法
@@ -187,9 +185,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.4" data-path="variables.html">
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/variables.html">
             
-                <a href="variables.html">
+                <a href="../chapter2/variables.html">
             
                     
                     variables
@@ -200,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="fragment.html">
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/fragment.html">
             
-                <a href="fragment.html">
+                <a href="../chapter2/fragment.html">
             
                     
                     fragment
@@ -295,9 +293,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+        <li class="chapter " data-level="1.6" data-path="./">
             
-                <a href="../chapter5/">
+                <a href="./">
             
                     
                     项目中遇到的bug
@@ -309,9 +307,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/font.html">
+        <li class="chapter active" data-level="1.6.1" data-path="font.html">
             
-                <a href="../chapter5/font.html">
+                <a href="font.html">
             
                     
                     safari中字号变大
@@ -357,7 +355,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >variables</a>
+        <a href=".." >safari中字号变大</a>
     </h1>
 </div>
 
@@ -372,39 +370,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="variables">Variables</h3>
-<p>&#x5B98;&#x65B9;&#x4F8B;&#x5B50;&#x628A;query&#x548C;variables&#x5206;&#x5F00;&#x5199;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x641E;&#x4E86;&#x534A;&#x5929;&#x4E0D;&#x77E5;&#x9053;&#x5E94;&#x8BE5;&#x653E;&#x5728;&#x54EA;&#x91CC;</p>
-<pre><code>query HeroNameAndFriends($episode: Episode) {
-  hero(episode: $episode) {
-    name
-    friends {
-      name
-    }
-  }
-}
-</code></pre><p>query variables</p>
-<pre><code>{
-  &quot;episode&quot;: &quot;JEDI&quot;
-}
-</code></pre><p><code>Episode</code>&#x6211;&#x521A;&#x5F00;&#x59CB;&#x4E00;&#x76F4;&#x4EE5;&#x4E3A;&#x662F;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x7EA0;&#x7ED3;&#x4E86;&#x534A;&#x5929;&#xFF0C;&#x540E;&#x6765;&#x7EC8;&#x4E8E;&#x660E;&#x767D;&#xFF0C;&#x8FD9;&#x662F;&#x4E2A;&#x96C6;&#xFF0C;&#x5C31;&#x662F;&#x4E2A;&#x7B3C;&#x7EDF;&#x7684;&#x8BF4;&#x6CD5;&#xFF0C;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x91CC;&#x5E94;&#x8BE5;&#x5199;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x540D;&#x3002;&#x3002;</p>
-<p>&#x6B63;&#x786E;&#x7684;&#x4E66;&#x5199;&#x5F62;&#x5F0F;</p>
-<pre><code>$.ajax({
-    url: &apos;/graphql&apos;,
-    data: {
-        query: `query HeroNameAndFriends($episode: Episode){    
-            hero(episode: $episode) {
-                name
-                friends {
-                    name
-                }
-            }
-        }`,
-        variables: {
-            &quot;episode&quot;: &quot;JEDI&quot;
-        }
-    }
-})
-</code></pre>
+                                <p>&#x6700;&#x8FD1;&#x9047;&#x5230;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;ios&#x79FB;&#x52A8;&#x7AEF;&#x4E2D;&#x7684;h5&#x9875;&#x9762;&#xFF0C;&#x6709;&#x90E8;&#x5206;&#x6587;&#x5B57;&#x7684;&#x5B57;&#x53F7;&#x5927;&#x5C0F;&#x6BD4;&#x8BBE;&#x7F6E;&#x7684;&#x5B57;&#x53F7;&#x504F;&#x5927;&#xFF0C;&#x67E5;&#x4E86;&#x5F88;&#x4E45;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x73B0;&#x8C61;&#xFF1A;</p>
+<pre><code>&lt;div&gt;
+    &lt;span&gt;&#x4F60;&#x597D;&#x5417;&#xFF1F;&#x6211;&#x5F88;&#x597D;&lt;br&gt;&#x4E0D;&#x9519;&#x54E6;&#xFF0C;&#x52A0;&#x6CB9;&#x52A0;&#x6CB9;&lt;br&gt;&#x55EF;&#x55EF;&#x55EF;&#x55EF;&#x55EF;&#x55EF;&lt;/span&gt;    
+&lt;/div&gt;
+</code></pre><p><code>&lt;br&gt;</code>&#x5BFC;&#x81F4;&#x5B57;&#x53F7;&#x5168;&#x90E8;&#x53D8;&#x5927;&#xFF0C;&#x540E;&#x6765;&#x8BBE;&#x7F6E;&#x4E86;<code>span {display: inline-block;}</code>&#x6062;&#x590D;&#x539F;&#x72B6;&#xFF0C;&#x4E4B;&#x540E;&#x5F53;&#x67D0;&#x4E00;&#x6BB5;&#x5185;&#x5BB9;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x9700;&#x8981;&#x6362;&#x884C;&#x65F6;&#xFF0C;&#x5C31;&#x53C8;&#x53D8;&#x5927;&#x4E86;&#x3002;</p>
+<p>&#x539F;&#x56E0;&#xFF1A;</p>
+<p>&#x731C;&#x6D4B;&#x662F;&#x56E0;&#x4E3A;safari&#x6D4F;&#x89C8;&#x5668;&#x5BF9;&#x6587;&#x5B57;&#x8FDB;&#x884C;&#x4E86;&#x7F29;&#x653E;&#xFF0C;&#x6839;&#x636E;&#x5BB9;&#x5668;&#x7684;&#x5BBD;&#x6765;&#x8BA1;&#x7B97;&#x201C;&#x9002;&#x5E94;&#x201D;&#x7684;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#xFF0C;&#x7531;&#x4E8E;&#x6587;&#x5B57;&#x5185;&#x5BB9;&#x957F;&#x77ED;&#x4E0D;&#x4E00;&#xFF0C;&#x5BFC;&#x81F4;&#x5BB9;&#x5668;&#x7684;&#x5BBD;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x90E8;&#x5206;&#x4EA7;&#x751F;&#x4E86;&#x6362;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;&#x505A;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7F29;&#x653E;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x4E86;&#x89E3;&#x5230;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;</p>
+<p> <code>-webkit-text-size-ajust</code></p>
+<p>&#x7981;&#x7528;Webkit&#x5185;&#x6838;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6587;&#x5B57;&#x5927;&#x5C0F;&#x8C03;&#x6574;&#x529F;&#x80FD;,&#x8BBE;&#x7F6E;&#x4E3A;<code>none</code>&#x4E4B;&#x540E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4E0D;&#x4F1A;&#x5BF9;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;&#x5B57;&#x53F7;&#x8FDB;&#x884C;&#x8C03;&#x6574;&#xFF0C;&#x5373;&#x4F7F;&#x5C0F;&#x4E8E;12px&#x4E5F;&#x4E0D;&#x4F1A;&#x5F3A;&#x5236;&#x8F6C;&#x5316;&#x6210;12px&#x3002;
+&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;&#xFF1A;<a href="https://segmentfault.com/q/1010000011235455" target="_blank">&#x5728;IOS&#x4E0B;&#xFF0C;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x8BBE;&#x7F6E;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x7684;&#x6587;&#x5B57;&#xFF0C;&#x5728;&#x663E;&#x793A;&#x4E0A;&#x660E;&#x663E;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x3002;&#x6709;DEMO&#x3002;</a></p>
+
                                 
                                 </section>
                             
@@ -431,14 +410,10 @@
 
             
                 
-                <a href="basic.html" class="navigation navigation-prev " aria-label="Previous page: 基础用法">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 项目中遇到的bug">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="fragment.html" class="navigation navigation-next " aria-label="Next page: fragment">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -447,7 +422,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"variables","level":"1.3.4","depth":2,"next":{"title":"fragment","level":"1.3.5","depth":2,"path":"chapter2/fragment.md","ref":"chapter2/fragment.md","articles":[]},"previous":{"title":"基础用法","level":"1.3.3","depth":2,"path":"chapter2/basic.md","ref":"chapter2/basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/variables.md","mtime":"2018-01-25T08:54:23.477Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T09:35:52.845Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"safari中字号变大","level":"1.6.1","depth":2,"previous":{"title":"项目中遇到的bug","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"safari中字号变大","level":"1.6.1","depth":2,"path":"chapter5/font.md","ref":"chapter5/font.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/font.md","mtime":"2018-02-05T10:03:40.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-05T09:35:52.845Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

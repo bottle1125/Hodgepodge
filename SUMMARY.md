@@ -11,3 +11,5 @@
     * [数组](chapter3/array.md)
 * [React](chapter4/README.md)
     * [样式](chapter4/style.md)
+* [项目中遇到的bug](chapter5/README.md)
+    * [safari中字号变大](chapter5/font.md)
