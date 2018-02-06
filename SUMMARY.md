@@ -9,6 +9,7 @@
 * [Javascript](chapter3/README.md)
     * [基本类型](chapter3/base.md)
     * [数组](chapter3/array.md)
+    * [toJSON](chapter3/toJSON.md)
 * [React](chapter4/README.md)
     * [样式](chapter4/style.md)
 * [项目中遇到的bug](chapter5/README.md)
