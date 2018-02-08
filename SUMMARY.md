@@ -12,5 +12,6 @@
     * [toJSON](chapter3/toJSON.md)
 * [React](chapter4/README.md)
     * [样式](chapter4/style.md)
-* [项目中遇到的bug](chapter5/README.md)
+* [项目中遇到的问题](chapter5/README.md)
     * [safari中字号变大](chapter5/font.md)
+    * [对话框弹出背景固定](chapter5/dialog.md)
