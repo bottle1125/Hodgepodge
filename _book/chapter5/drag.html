@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>对话框弹出背景固定 · GitBook</title>
+        <title>拖拽图片打开新的标签页 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="drag.html" />
     
-    
-    <link rel="prev" href="font.html" />
+    <link rel="prev" href="dialog.html" />
     
 
     </head>
@@ -335,7 +333,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.2" data-path="dialog.html">
+        <li class="chapter " data-level="1.6.2" data-path="dialog.html">
             
                 <a href="dialog.html">
             
@@ -348,7 +346,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="drag.html">
+        <li class="chapter active" data-level="1.6.3" data-path="drag.html">
             
                 <a href="drag.html">
             
@@ -396,7 +394,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >对话框弹出背景固定</a>
+        <a href=".." >拖拽图片打开新的标签页</a>
     </h1>
 </div>
 
@@ -411,22 +409,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x5BF9;&#x8BDD;&#x6846;&#x5F39;&#x51FA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x80CC;&#x666F;&#x9700;&#x8981;&#x56FA;&#x5B9A;&#x5728;&#x539F;&#x4F4D;</p>
-<pre><code>// fixed,body&#x8BBE;&#x7F6E;fixed&#x540E;&#x9875;&#x9762;&#x4F1A;&#x98D8;&#x5230;&#x9876;&#x90E8;&#xFF0C;&#x9700;&#x8981;&#x628A;&#x5B83;&#x62D6;&#x4E0B;&#x6765;&#x3002;
-const currentScrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-document.body.setAttribute(&apos;class&apos;, &apos;page-fixed&apos;);
+                                <p>&#x4E00;&#x6B21;&#x9879;&#x76EE;&#x4E2D;&#x7528;&#x5230;&#x62D6;&#x62FD;&#x56FE;&#x7247;&#x6392;&#x5E8F;&#xFF0C;&#x5728;chrome&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x8868;&#x73B0;&#x826F;&#x597D;&#xFF0C;&#x4F46;&#x5230;&#x4E86;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#x548C;360&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x60C5;&#x51B5;&#xFF0C;&#x62D6;&#x62FD;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6253;&#x5F00;&#x65B0;&#x7684;&#x6807;&#x7B7E;&#x9875;&#x3002;
+&#x67E5;&#x4E86;&#x8D44;&#x6599;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;&#xFF1A;</p>
+<pre><code>document.body.ondrop = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+};
+</code></pre><p>&#x628A;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x7981;&#x6B62;&#x6389;&#x3002;</p>
 
-document.body.style.top = -currentScrollTop + &apos;px&apos;;
-
-// recover
-document.body.setAttribute(&apos;class&apos;, &apos;&apos;);
-document.body.scrollTop = document.documentElement.scrollTop = currentScrollTop;
-
-.page-fixed {
-    position: fixed;
-    width: 100%;
-}
-</code></pre>
                                 
                                 </section>
                             
@@ -453,14 +443,10 @@ document.body.scrollTop = document.documentElement.scrollTop = currentScrollTop;
 
             
                 
-                <a href="font.html" class="navigation navigation-prev " aria-label="Previous page: safari中字号变大">
+                <a href="dialog.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 对话框弹出背景固定">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="drag.html" class="navigation navigation-next " aria-label="Next page: 拖拽图片打开新的标签页">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -469,7 +455,7 @@ document.body.scrollTop = document.documentElement.scrollTop = currentScrollTop;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对话框弹出背景固定","level":"1.6.2","depth":2,"next":{"title":"拖拽图片打开新的标签页","level":"1.6.3","depth":2,"path":"chapter5/drag.md","ref":"chapter5/drag.md","articles":[]},"previous":{"title":"safari中字号变大","level":"1.6.1","depth":2,"path":"chapter5/font.md","ref":"chapter5/font.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dialog.md","mtime":"2018-02-06T06:06:38.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-08T09:07:15.065Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"拖拽图片打开新的标签页","level":"1.6.3","depth":2,"previous":{"title":"对话框弹出背景固定","level":"1.6.2","depth":2,"path":"chapter5/dialog.md","ref":"chapter5/dialog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/drag.md","mtime":"2018-02-08T09:09:56.800Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-08T09:07:15.065Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

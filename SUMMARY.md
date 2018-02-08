@@ -15,3 +15,4 @@
 * [项目中遇到的问题](chapter5/README.md)
     * [safari中字号变大](chapter5/font.md)
     * [对话框弹出背景固定](chapter5/dialog.md)
+    * [拖拽图片打开新的标签页](chapter5/drag.md)
